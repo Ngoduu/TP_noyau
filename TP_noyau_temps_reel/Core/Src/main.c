@@ -26,6 +26,9 @@
 #include "queue.h"
 #include "FreeRTOSConfig.h"
 
+#define Q_UART1_LENGTH 10
+#define Q_UART1_SIZE sizeof(uint8_t)
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -63,10 +66,14 @@ void MX_FREERTOS_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-SemaphoreHandle_t myBinarySem01;
+SemaphoreHandle_t myBinarySem01; // handle semaphore
 
-TaskHandle_t xTaskGiveHandle;
-TaskHandle_t xTaskTakeHandle;
+TaskHandle_t xTaskGiveHandle; //handle tache
+TaskHandle_t xTaskTakeHandle; //handle tache
+
+QueueHandle_t timerQueue; //handle queue
+
+uint8_t timer_value = 0;
 
 void giveTask(void const * argument)
 {
@@ -76,14 +83,23 @@ void giveTask(void const * argument)
 	{
 		printf("Giving \r\n");
 		vTaskDelay(delay/portTICK_PERIOD_MS);
-		xTaskNotifyGive(xTaskTakeHandle);
-		//xSemaphoreGive(myBinarySem01);
+		xTaskNotifyGive(xTaskTakeHandle); //notification
+
+		//xSemaphoreGive(myBinarySem01); //semaphore
+
+		uint8_t timer_value = HAL_GetTick();
+
+		BaseType_t higher_priority_task_woken = pdFALSE;
+		if (xQueueSend(timerQueue,(void *)&timer_value,portMAX_DELAY) != pdPASS){
+			printf("Failed to send data to queue\r\n");
+		}
 		printf("Token given \r\n");
 		delay = delay + 100;
 	}
 }
 void takeTask(void const * argument)
 {
+	uint8_t char_to_process;
 	for(;;)
 	{
 		/*if(xSemaphoreTake(myBinarySem01,1000) == pdTRUE){
@@ -92,6 +108,8 @@ void takeTask(void const * argument)
 
 		if(ulTaskNotifyTake(pdTRUE,1000))
 		{
+			xQueueReceive(timerQueue, (void *)&char_to_process - timer_value,portMAX_DELAY);
+			printf("time took to recieve : %d ms\r\n",char_to_process);
 			printf("Took \r\n");
 		}
 
@@ -104,7 +122,7 @@ void takeTask(void const * argument)
 	}
 }
 
-int __io_putchar(int ch) {
+int __io_putchar(int ch) {  //code printf
 	HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
 	return ch;
 }
@@ -146,6 +164,8 @@ int main(void)
 
 	myBinarySem01 = xSemaphoreCreateBinary();
 
+	timerQueue = xQueueCreate(Q_UART1_LENGTH, Q_UART1_SIZE);
+
 	xTaskCreate(giveTask,
 			"Give",
 			256,
@@ -163,6 +183,7 @@ int main(void)
 	);
 
 	vTaskStartScheduler();
+
 
 
 	/* USER CODE END 2 */

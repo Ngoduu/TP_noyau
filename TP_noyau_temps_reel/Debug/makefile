@@ -64,8 +64,8 @@ all: main-build
 main-build: TP_noyau_temps_reel.elf secondary-outputs
 
 # Tool invocations
-TP_noyau_temps_reel.elf TP_noyau_temps_reel.map: $(OBJS) $(USER_OBJS) /users/tenzthup91/STM32CubeIDE/workspace_1.14.0/TP_noyau_temps_reel/STM32F746NGHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TP_noyau_temps_reel.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/users/tenzthup91/STM32CubeIDE/workspace_1.14.0/TP_noyau_temps_reel/STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP_noyau_temps_reel.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+TP_noyau_temps_reel.elf TP_noyau_temps_reel.map: $(OBJS) $(USER_OBJS) /users/tenzthup91/STM32CubeIDE/TP_noyau/TP_noyau_temps_reel/STM32F746NGHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "TP_noyau_temps_reel.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/users/tenzthup91/STM32CubeIDE/TP_noyau/TP_noyau_temps_reel/STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP_noyau_temps_reel.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
