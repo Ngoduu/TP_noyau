@@ -1,0 +1,10 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:tp_freertos_reentrance Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TP_noyau_temps_reel Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:rtos_td_shell Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Tp_FREERTOS Debug
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TP_noyau_temps_reel\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TP_noyau_temps_reel\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Tp_FREERTOS\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:tp_freertos_reentrance\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:tp_freertos_reentrance\ Debug/activeLaunchTarget=null\:---

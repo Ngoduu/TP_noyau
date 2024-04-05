@@ -1,0 +1,10 @@
+11:55:14 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+make -j16 all 
+arm-none-eabi-size  Tp_FREERTOS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33004	    136	  19224	  52364	   cc8c	Tp_FREERTOS.elf
+Finished building: default.size.stdout
+ 
+
+11:55:15 Build Finished. 0 errors, 0 warnings. (took 706ms)
+

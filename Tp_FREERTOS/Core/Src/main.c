@@ -45,10 +45,11 @@
 #define TASK2_DELAY 2
 
 int leddelay = 1;
+int spamdelay = 1;
 
 QueueHandle_t QueueHandle;
 UBaseType_t uxQueueLength = 10, uxItemSize = sizeof(int);
-TaskHandle_t handle_blink_led, handle_echo_uart, handle_givetask, handle_taketask, handle_shell;
+TaskHandle_t handle_blink_led, handle_echo_uart, handle_givetask, handle_taketask, handle_shell,handle_spam,handle_bidon;
 
 SemaphoreHandle_t timeMutex;
 
@@ -132,6 +133,47 @@ void task_blink_led(void * pvParameters)
 	}
 }
 
+/*void task_spam(void * pvParameters)
+{
+	for(;;)
+	{
+		if (spamdelay != 0)
+		{
+
+			printf("%s\r\n",msg);
+			vTaskDelay(spamdelay);
+		}
+
+		else
+		{
+			vTaskSuspend(handle_spam);
+		}
+	}
+}
+*/
+
+/*void task_bidon(void * pvParameters)
+{
+	int tab[1024];
+	while(1)
+	{
+		for (int i = 0; i < 10000; i++) {
+				tab[i] = i;
+				printf("tab[%d]\r\n",tab[i]);
+			}
+	}
+
+}*/
+
+void task_bidon(void * pvParameters)
+{
+	for(;;)
+	{
+
+	}
+
+}
+
 void task_give(void * unused)
 {
 	int q_value_send;
@@ -185,8 +227,22 @@ int led(int argc, char ** argv)
 
 int spam(int argc, char ** argv)
 {
+	if(argc != 2)
+	{
+		printf("Error\r\n");
+		return -1;
+	}
+	else
+	{
+		for(int i = 0; i <= 10; i++)
+		{
+			printf("%s\r\n",argv[1]);
+		}
+	}
 
+	return 0;
 }
+
 
 int addition (int argc, char ** argv)
 {
@@ -214,11 +270,17 @@ int addition (int argc, char ** argv)
 	return 0;
 }
 
+int vApplicationStackOverflowHook(TaskHandle_t xTask,unsigned char *pcTaskName)
+{
+	printf("Overflow task %s\r\n", pcTaskName);
+}
+
 void shell(void * unused)
 {
 	shell_init();
 	shell_add('l', led, "Blink");
 	shell_add('a', addition, "Add 2 value");
+	shell_add('s', spam, "spam");
 	shell_run();
 }
 
@@ -269,17 +331,41 @@ int main(void)
 	ret = xTaskCreate(task2, "Tache 2", STACK_SIZE, (void *) TASK2_DELAY, TASK2_PRIORITY, &h_task2);
 	configASSERT(pdPASS == ret);*/
 
-	ret = xTaskCreate(task_blink_led,"Blink",256,NULL,5,&handle_blink_led);
-	configASSERT(pdPASS == ret);
-
-	ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
+	/*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
 	configASSERT(pdPASS == ret);
 
 	ret = xTaskCreate(task_take,"Take",256,NULL,7,&handle_taketask);
+	configASSERT(pdPASS == ret);*/
+
+	ret = xTaskCreate(task_blink_led,"Blink",256,NULL,5,&handle_blink_led);
 	configASSERT(pdPASS == ret);
 
-	ret = xTaskCreate(shell,"Shell",256,NULL,8,&handle_shell);
+	if(ret != pdPASS)
+	{
+		printf("Error led\r\n");
+		Error_Handler();
+	}
+
+	/*for(int i = 0;i<50;i++){
+		if (ret == pdPASS){
+			ret = xTaskCreate(task_bidon,"Bidon",256,NULL,11,&handle_bidon);
+			printf("task %d created\r\n",i);
+		}
+		else
+		{
+			printf("Cant create task\r\n");
+			Error_Handler();
+		}
+	}*/
+
+	ret = xTaskCreate(shell,"Shell",256,NULL,10,&handle_shell);
 	configASSERT(pdPASS == ret);
+
+	if(ret != pdPASS)
+		{
+			printf("Error shell\r\n");
+			Error_Handler();
+		}
 
 
 	vTaskStartScheduler();

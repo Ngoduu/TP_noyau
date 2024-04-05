@@ -1,0 +1,31 @@
+!SESSION 2024-03-29 12:06:00.991 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-03-29 12:06:20.139
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-03-29 12:06:20.140
+!MESSAGE Log4j2 initialized with config file /users/tenzthup91/STM32CubeIDE/TP_noyau/TP_noyau_temps_reel/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-03-29 12:06:22.336
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-29 12:07:50.547
+!MESSAGE Indexed 'tp_freertos_reentrance' (38 sources, 140 headers) in 6.56 sec: 13,939 declarations; 66,295 references; 2 unresolved inclusions; 147 syntax errors; 148 unresolved names (0.18%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-29 12:07:53.681
+!MESSAGE Indexed 'TP_noyau_temps_reel' (38 sources, 139 headers) in 3.13 sec: 14,565 declarations; 83,994 references; 2 unresolved inclusions; 147 syntax errors; 148 unresolved names (0.15%)
+
+!ENTRY org.eclipse.core.resources 2 2 2024-03-29 12:18:53.230
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-03-29 12:18:53.231
+!MESSAGE The project description file (.project) for 'TP_noyau_temps_reel' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-03-29 12:18:53.231
+!MESSAGE The project description file (.project) for 'tp_freertos_reentrance' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-29 12:18:59.205
+!MESSAGE Indexed 'rtos_td_shell' (39 sources, 140 headers) in 2.84 sec: 14,622 declarations; 81,934 references; 2 unresolved inclusions; 147 syntax errors; 148 unresolved names (0.15%)
