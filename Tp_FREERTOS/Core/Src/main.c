@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -243,6 +244,16 @@ int spam(int argc, char ** argv)
 	return 0;
 }
 
+void configureTImerForRunTimeStats(void)
+{
+	HAL_TIM_Base_Start(&htim1);
+}
+
+unsigned long getRunTimeCounterValue(void)
+{
+	return __HAL_TIM_GET_COUNTER(&htim1);
+}
+
 
 int addition (int argc, char ** argv)
 {
@@ -316,6 +327,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART1_UART_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   BaseType_t ret;
   TaskHandle_t h_task1 = NULL;
@@ -326,10 +338,10 @@ int main(void)
 	timeMutex = xSemaphoreCreateMutex();
 
 	/* Create the task, storing the handle. */
-	/*ret = xTaskCreate(task1, "Tache 1", STACK_SIZE, (void *) TASK1_DELAY, TASK1_PRIORITY, &h_task1);
+	ret = xTaskCreate(task1, "Tache 1", STACK_SIZE, (void *) TASK1_DELAY, TASK1_PRIORITY, &h_task1);
 	configASSERT(pdPASS == ret);
 	ret = xTaskCreate(task2, "Tache 2", STACK_SIZE, (void *) TASK2_DELAY, TASK2_PRIORITY, &h_task2);
-	configASSERT(pdPASS == ret);*/
+	configASSERT(pdPASS == ret);
 
 	/*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
 	configASSERT(pdPASS == ret);
@@ -445,6 +457,27 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM6 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM6) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

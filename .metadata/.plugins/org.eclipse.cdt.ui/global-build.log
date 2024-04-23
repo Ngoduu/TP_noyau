@@ -1,14 +1,29 @@
-11:55:09 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+15:11:09 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_take':
+../Core/Src/main.c:195:20: warning: variable 'ret_q' set but not used [-Wunused-but-set-variable]
+  195 |         BaseType_t ret_q;
+      |                    ^~~~~
+../Core/Src/main.c: In function 'vApplicationStackOverflowHook':
+../Core/Src/main.c:287:1: warning: control reaches end of non-void function [-Wreturn-type]
+  287 | }
+      | ^
+arm-none-eabi-gcc -o "Tp_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m7 -T"/users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tp_FREERTOS.elf
+ 
 arm-none-eabi-size  Tp_FREERTOS.elf 
+arm-none-eabi-objdump -h -S Tp_FREERTOS.elf  > "Tp_FREERTOS.list"
    text	   data	    bss	    dec	    hex	filename
-  33004	    136	  19224	  52364	   cc8c	Tp_FREERTOS.elf
+  39884	    136	  19376	  59396	   e804	Tp_FREERTOS.elf
 Finished building: default.size.stdout
  
-11:55:14 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+Finished building: Tp_FREERTOS.list
+ 
+15:11:13 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
 make -j16 all 
 arm-none-eabi-size  Tp_FREERTOS.elf 
    text	   data	    bss	    dec	    hex	filename
-  33004	    136	  19224	  52364	   cc8c	Tp_FREERTOS.elf
+  39884	    136	  19376	  59396	   e804	Tp_FREERTOS.elf
 Finished building: default.size.stdout
  

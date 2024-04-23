@@ -533,3 +533,251 @@
 2024-04-23 13:39:42,503 [INFO] CADModel:114 - Register for checkConnection events
 2024-04-23 13:39:42,507 [INFO] RtosManager:697 - Active RTOS found at IOC load: FREERTOS [Cortex-M7NS]
 2024-04-23 13:39:42,555 [INFO] OpenFileManager:343 - Restore cursor
+2024-04-23 13:45:38,779 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2024-04-23 13:55:07,117 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 526232720 Bytes (891289600)
+2024-04-23 13:55:07,269 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 547204240 Bytes (891289600)
+2024-04-23 13:55:07,790 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 585479312 Bytes (891289600)
+2024-04-23 13:55:11,038 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FREERTOS
+2024-04-23 13:55:11,038 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-23 13:55:11,038 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-23 13:55:11,039 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-23 13:55:11,039 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-04-23 13:55:11,042 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-23 13:55:11,043 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-04-23 13:55:11,603 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/license.tmp_save
+2024-04-23 13:55:12,117 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/license.tmp
+2024-04-23 13:55:12,667 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/gpio.c_save
+2024-04-23 13:55:12,927 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/gpio.c
+2024-04-23 13:55:12,932 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/gpio.h_save
+2024-04-23 13:55:13,064 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/gpio.h
+2024-04-23 13:55:14,577 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-23 13:55:14,582 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp_save
+2024-04-23 13:55:14,677 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp
+2024-04-23 13:55:14,679 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp_save
+2024-04-23 13:55:14,776 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp
+2024-04-23 13:55:14,778 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp_save
+2024-04-23 13:55:14,869 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp
+2024-04-23 13:55:14,871 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-04-23 13:55:14,964 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp
+2024-04-23 13:55:14,966 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-04-23 13:55:15,054 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp
+2024-04-23 13:55:15,055 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp_save
+2024-04-23 13:55:15,143 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp
+2024-04-23 13:55:15,145 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp_save
+2024-04-23 13:55:15,231 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp
+2024-04-23 13:55:15,240 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-23 13:55:15,244 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp_save
+2024-04-23 13:55:15,329 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp
+2024-04-23 13:55:15,330 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp_save
+2024-04-23 13:55:15,418 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp
+2024-04-23 13:55:15,420 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp_save
+2024-04-23 13:55:15,504 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp
+2024-04-23 13:55:15,506 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-04-23 13:55:15,594 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp
+2024-04-23 13:55:15,596 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-04-23 13:55:15,687 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp
+2024-04-23 13:55:15,689 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp_save
+2024-04-23 13:55:15,782 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp
+2024-04-23 13:55:15,784 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp_save
+2024-04-23 13:55:15,877 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp
+2024-04-23 13:55:15,879 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/FreeRTOSConfig.h_save
+2024-04-23 13:55:15,997 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/FreeRTOSConfig.h
+2024-04-23 13:55:15,999 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/freertos.c_save
+2024-04-23 13:55:16,102 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/freertos.c
+2024-04-23 13:55:16,106 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/cortex.tmp_save
+2024-04-23 13:55:16,202 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/cortex.tmp
+2024-04-23 13:55:16,207 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/usart.c_save
+2024-04-23 13:55:16,366 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/usart.c
+2024-04-23 13:55:16,368 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/usart.h_save
+2024-04-23 13:55:16,458 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/usart.h
+2024-04-23 13:55:16,470 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_it.c_save
+2024-04-23 13:55:16,599 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_it.c
+2024-04-23 13:55:16,601 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_it.h_save
+2024-04-23 13:55:16,692 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_it.h
+2024-04-23 13:55:16,700 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_msp.c_save
+2024-04-23 13:55:16,825 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_msp.c
+2024-04-23 13:55:16,827 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/system.tmp_save
+2024-04-23 13:55:16,912 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/system.tmp
+2024-04-23 13:55:16,913 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_timebase_tim.c_save
+2024-04-23 13:55:17,002 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_timebase_tim.c
+2024-04-23 13:55:17,007 [INFO] CodeEngine:311 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_hal_conf.h_save
+2024-04-23 13:55:17,111 [INFO] CodeEngine:335 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_hal_conf.h
+2024-04-23 13:55:17,168 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/main.h_save
+2024-04-23 13:55:17,295 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/main.h
+2024-04-23 13:55:17,300 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/main.c_save
+2024-04-23 13:55:17,483 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/main.c
+2024-04-23 13:55:18,035 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 99mS.
+2024-04-23 13:55:18,043 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-04-23 13:55:18,485 [INFO] ConfigFileManager:1495 - The Die is : DIE449
+2024-04-23 13:55:18,491 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-04-23 13:55:18,494 [INFO] ApiDbMcu:508 - Load IP Config File for LIBJPEG
+2024-04-23 13:55:18,502 [INFO] ApiDbMcu:508 - Load IP Config File for LWIP
+2024-04-23 13:55:18,511 [INFO] ApiDbMcu:508 - Load IP Config File for MBEDTLS
+2024-04-23 13:55:18,523 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2024-04-23 13:55:18,528 [INFO] ApiDbMcu:508 - Load IP Config File for USB_HOST
+2024-04-23 13:55:19,493 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-04-23 13:55:20,616 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2574mS.
+2024-04-23 13:55:20,617 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-04-23 13:55:20,618 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-04-23 14:07:28,180 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 444860968 Bytes (1017118720)
+2024-04-23 14:07:28,350 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 465306152 Bytes (1017118720)
+2024-04-23 14:07:28,799 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 503054888 Bytes (1017118720)
+2024-04-23 14:07:30,480 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FREERTOS
+2024-04-23 14:07:30,481 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-23 14:07:30,481 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-23 14:07:30,481 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-23 14:07:30,481 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-04-23 14:07:30,488 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-23 14:07:30,489 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-04-23 14:07:30,828 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/license.tmp_save
+2024-04-23 14:07:31,019 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/license.tmp
+2024-04-23 14:07:31,729 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/gpio.c_save
+2024-04-23 14:07:31,865 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/gpio.c
+2024-04-23 14:07:31,868 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/gpio.h_save
+2024-04-23 14:07:31,959 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/gpio.h
+2024-04-23 14:07:33,384 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-23 14:07:33,387 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp_save
+2024-04-23 14:07:33,474 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp
+2024-04-23 14:07:33,475 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp_save
+2024-04-23 14:07:33,563 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp
+2024-04-23 14:07:33,564 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp_save
+2024-04-23 14:07:33,645 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp
+2024-04-23 14:07:33,647 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-04-23 14:07:33,743 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp
+2024-04-23 14:07:33,744 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-04-23 14:07:33,824 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp
+2024-04-23 14:07:33,826 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp_save
+2024-04-23 14:07:33,906 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp
+2024-04-23 14:07:33,907 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp_save
+2024-04-23 14:07:33,988 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp
+2024-04-23 14:07:33,995 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-23 14:07:33,998 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp_save
+2024-04-23 14:07:34,077 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp
+2024-04-23 14:07:34,079 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp_save
+2024-04-23 14:07:34,161 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp
+2024-04-23 14:07:34,162 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp_save
+2024-04-23 14:07:34,243 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp
+2024-04-23 14:07:34,244 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-04-23 14:07:34,328 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp
+2024-04-23 14:07:34,330 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-04-23 14:07:34,409 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp
+2024-04-23 14:07:34,410 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp_save
+2024-04-23 14:07:34,491 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp
+2024-04-23 14:07:34,492 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp_save
+2024-04-23 14:07:34,573 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp
+2024-04-23 14:07:34,574 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/FreeRTOSConfig.h_save
+2024-04-23 14:07:34,677 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/FreeRTOSConfig.h
+2024-04-23 14:07:34,679 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/freertos.c_save
+2024-04-23 14:07:34,775 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/freertos.c
+2024-04-23 14:07:34,778 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/cortex.tmp_save
+2024-04-23 14:07:34,873 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/cortex.tmp
+2024-04-23 14:07:34,877 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/usart.c_save
+2024-04-23 14:07:35,009 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/usart.c
+2024-04-23 14:07:35,011 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/usart.h_save
+2024-04-23 14:07:35,094 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/usart.h
+2024-04-23 14:07:35,104 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_it.c_save
+2024-04-23 14:07:35,315 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_it.c
+2024-04-23 14:07:35,318 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_it.h_save
+2024-04-23 14:07:35,409 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_it.h
+2024-04-23 14:07:35,415 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_msp.c_save
+2024-04-23 14:07:35,533 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_msp.c
+2024-04-23 14:07:35,535 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/system.tmp_save
+2024-04-23 14:07:35,615 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/system.tmp
+2024-04-23 14:07:35,617 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_timebase_tim.c_save
+2024-04-23 14:07:35,702 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_timebase_tim.c
+2024-04-23 14:07:35,706 [INFO] CodeEngine:311 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_hal_conf.h_save
+2024-04-23 14:07:35,797 [INFO] CodeEngine:335 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_hal_conf.h
+2024-04-23 14:07:35,826 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/main.h_save
+2024-04-23 14:07:35,935 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/main.h
+2024-04-23 14:07:35,937 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/main.c_save
+2024-04-23 14:07:36,061 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/main.c
+2024-04-23 14:07:36,624 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 40mS.
+2024-04-23 14:07:36,627 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-04-23 14:07:36,901 [INFO] ConfigFileManager:1495 - The Die is : DIE449
+2024-04-23 14:07:38,260 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1633mS.
+2024-04-23 14:07:38,261 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-04-23 14:07:38,263 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-04-23 14:59:03,389 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 748056056 Bytes (1073741824)
+2024-04-23 14:59:03,513 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 768505336 Bytes (1073741824)
+2024-04-23 14:59:04,014 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 850294264 Bytes (1073741824)
+2024-04-23 14:59:05,516 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FREERTOS
+2024-04-23 14:59:05,517 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F7
+2024-04-23 14:59:05,517 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-23 14:59:05,517 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-23 14:59:05,517 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-23 14:59:05,517 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-04-23 14:59:05,519 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-23 14:59:05,519 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-04-23 14:59:05,810 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/license.tmp_save
+2024-04-23 14:59:05,924 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/license.tmp
+2024-04-23 14:59:06,303 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/gpio.c_save
+2024-04-23 14:59:06,476 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/gpio.c
+2024-04-23 14:59:06,478 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/gpio.h_save
+2024-04-23 14:59:06,560 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/gpio.h
+2024-04-23 14:59:08,191 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-23 14:59:08,194 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp_save
+2024-04-23 14:59:08,281 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp
+2024-04-23 14:59:08,282 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp_save
+2024-04-23 14:59:08,371 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp
+2024-04-23 14:59:08,372 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp_save
+2024-04-23 14:59:08,456 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp
+2024-04-23 14:59:08,457 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-04-23 14:59:08,544 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp
+2024-04-23 14:59:08,545 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-04-23 14:59:08,628 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp
+2024-04-23 14:59:08,629 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp_save
+2024-04-23 14:59:08,714 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp
+2024-04-23 14:59:08,715 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp_save
+2024-04-23 14:59:08,798 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp
+2024-04-23 14:59:08,805 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-23 14:59:08,808 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp_save
+2024-04-23 14:59:08,891 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_inc.tmp
+2024-04-23 14:59:08,892 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp_save
+2024-04-23 14:59:08,978 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_vars.tmp
+2024-04-23 14:59:08,979 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp_save
+2024-04-23 14:59:09,063 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_pfp.tmp
+2024-04-23 14:59:09,064 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-04-23 14:59:09,152 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_obj_creat.tmp
+2024-04-23 14:59:09,153 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-04-23 14:59:09,236 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_kernelStart.tmp
+2024-04-23 14:59:09,238 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp_save
+2024-04-23 14:59:09,319 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_default_thread.tmp
+2024-04-23 14:59:09,321 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp_save
+2024-04-23 14:59:09,404 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/rtos_threads.tmp
+2024-04-23 14:59:09,406 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/FreeRTOSConfig.h_save
+2024-04-23 14:59:09,509 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/FreeRTOSConfig.h
+2024-04-23 14:59:09,511 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/freertos.c_save
+2024-04-23 14:59:09,606 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/freertos.c
+2024-04-23 14:59:09,609 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/cortex.tmp_save
+2024-04-23 14:59:09,701 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/cortex.tmp
+2024-04-23 14:59:09,705 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/tim.c_save
+2024-04-23 14:59:09,848 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/tim.c
+2024-04-23 14:59:09,849 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/tim.h_save
+2024-04-23 14:59:09,931 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/tim.h
+2024-04-23 14:59:09,934 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/usart.c_save
+2024-04-23 14:59:10,054 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/usart.c
+2024-04-23 14:59:10,056 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/usart.h_save
+2024-04-23 14:59:10,138 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/usart.h
+2024-04-23 14:59:10,148 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_it.c_save
+2024-04-23 14:59:10,355 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_it.c
+2024-04-23 14:59:10,357 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_it.h_save
+2024-04-23 14:59:10,439 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_it.h
+2024-04-23 14:59:10,444 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_msp.c_save
+2024-04-23 14:59:10,559 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_msp.c
+2024-04-23 14:59:10,560 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/system.tmp_save
+2024-04-23 14:59:10,639 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/MXTmpFiles/system.tmp
+2024-04-23 14:59:10,641 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_timebase_tim.c_save
+2024-04-23 14:59:10,728 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/stm32f7xx_hal_timebase_tim.c
+2024-04-23 14:59:10,731 [INFO] CodeEngine:311 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_hal_conf.h_save
+2024-04-23 14:59:10,822 [INFO] CodeEngine:335 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/stm32f7xx_hal_conf.h
+2024-04-23 14:59:10,849 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/main.h_save
+2024-04-23 14:59:10,957 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Inc/main.h
+2024-04-23 14:59:10,959 [INFO] CodeEngine:255 - oldGeneratedFile, /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/main.c_save
+2024-04-23 14:59:11,080 [INFO] CodeEngine:279 - Generated code: /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/Core/Src/main.c
+2024-04-23 14:59:11,596 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 39mS.
+2024-04-23 14:59:11,598 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-04-23 14:59:11,858 [INFO] ConfigFileManager:1495 - The Die is : DIE449
+2024-04-23 14:59:13,242 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1644mS.
+2024-04-23 14:59:13,243 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-04-23 14:59:13,245 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-04-23 15:42:20,557 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
