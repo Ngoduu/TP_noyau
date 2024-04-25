@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -125,7 +126,7 @@ void task2(void * pvParameters)
 	}
 }
 
-void task_blink_led(void * pvParameters)
+/*void task_blink_led(void * pvParameters)
 {
 	for(;;)
 	{
@@ -133,6 +134,7 @@ void task_blink_led(void * pvParameters)
 		vTaskDelay(leddelay);
 	}
 }
+*/
 
 /*void task_spam(void * pvParameters)
 {
@@ -152,19 +154,6 @@ void task_blink_led(void * pvParameters)
 	}
 }
 */
-
-/*void task_bidon(void * pvParameters)
-{
-	int tab[1024];
-	while(1)
-	{
-		for (int i = 0; i < 10000; i++) {
-				tab[i] = i;
-				printf("tab[%d]\r\n",tab[i]);
-			}
-	}
-
-}*/
 
 void task_bidon(void * pvParameters)
 {
@@ -251,7 +240,42 @@ void configureTImerForRunTimeStats(void)
 
 unsigned long getRunTimeCounterValue(void)
 {
-	return __HAL_TIM_GET_COUNTER(&htim1);
+	//return __HAL_TIM_GET_COUNTER(&htim1);
+	unsigned long time = __HAL_TIM_GET_COUNTER(&htim1);
+	//printf("Run Time Counter Value: %lu\r\n", time);
+	return 0;
+}
+
+int show_runtime_stats(int argc, char **argv) {
+    char buffer[512];
+    vTaskGetRunTimeStats(buffer);
+    printf("Run Time Stats:\r\n%s\r\n", buffer);
+    return 0;
+}
+
+int show_task_list(int argc, char **argv) {
+    char buffer[512];
+    vTaskList(buffer);
+    printf("Task List:\r\n%s\r\n", buffer);
+    return 0;
+}
+
+int write_read_adx(int argc, char ** argv)
+{
+	unsigned char write, read = (1<<7) + 0 + 0;
+
+	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_3,GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi2,&write,1,HAL_MAX_DELAY);
+	HAL_SPI_Receive(&hspi2,&read,1,HAL_MAX_DELAY);
+	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_3,GPIO_PIN_SET);
+
+	if (read == 0xE5)
+		printf("C'est connecté\r\n");
+
+	else
+		printf("Erreur\r\n");
+
+	return 0;
 }
 
 
@@ -292,6 +316,10 @@ void shell(void * unused)
 	shell_add('l', led, "Blink");
 	shell_add('a', addition, "Add 2 value");
 	shell_add('s', spam, "spam");
+	//shell_add('t',getRunTimeCounterValue,"time");
+	//shell_add('r',show_runtime_stats,"runtime");
+	//shell_add('T',show_task_list,"task");
+	//shell_add('w', write_read_adx, "write read adx");
 	shell_run();
 }
 
@@ -328,6 +356,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_TIM1_Init();
+  MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
   BaseType_t ret;
   TaskHandle_t h_task1 = NULL;
@@ -338,10 +367,10 @@ int main(void)
 	timeMutex = xSemaphoreCreateMutex();
 
 	/* Create the task, storing the handle. */
-	ret = xTaskCreate(task1, "Tache 1", STACK_SIZE, (void *) TASK1_DELAY, TASK1_PRIORITY, &h_task1);
+	/*ret = xTaskCreate(task1, "Tache 1", STACK_SIZE, (void *) TASK1_DELAY, TASK1_PRIORITY, &h_task1);
 	configASSERT(pdPASS == ret);
 	ret = xTaskCreate(task2, "Tache 2", STACK_SIZE, (void *) TASK2_DELAY, TASK2_PRIORITY, &h_task2);
-	configASSERT(pdPASS == ret);
+	configASSERT(pdPASS == ret);/*
 
 	/*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
 	configASSERT(pdPASS == ret);
@@ -349,7 +378,7 @@ int main(void)
 	ret = xTaskCreate(task_take,"Take",256,NULL,7,&handle_taketask);
 	configASSERT(pdPASS == ret);*/
 
-	ret = xTaskCreate(task_blink_led,"Blink",256,NULL,5,&handle_blink_led);
+	//ret = xTaskCreate(task_blink_led,"Blink",256,NULL,5,&handle_blink_led);
 	configASSERT(pdPASS == ret);
 
 	if(ret != pdPASS)

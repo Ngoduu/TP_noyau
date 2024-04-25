@@ -2853,3 +2853,10 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-25 14:33:22.611
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-25 15:42:45.686
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-25 15:42:45.686
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-25 15:42:45.686
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
