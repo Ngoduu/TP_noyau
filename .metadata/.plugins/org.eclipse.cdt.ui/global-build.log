@@ -1,4 +1,4 @@
-17:26:02 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+10:34:22 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'task_take':
@@ -9,48 +9,365 @@ arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -D
 ../Core/Src/main.c:244:23: warning: unused variable 'time' [-Wunused-variable]
   244 |         unsigned long time = __HAL_TIM_GET_COUNTER(&htim1);
       |                       ^~~~
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:308:33: warning: passing argument 2 of 'HAL_SPI_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+  308 |         HAL_SPI_Receive(&hspi2, &data, 6, HAL_MAX_DELAY);
+      |                                 ^~~~~
+      |                                 |
+      |                                 uint8_t (*)[6] {aka unsigned char (*)[6]}
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:407,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h:793:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
+  793 | HAL_StatusTypeDef HAL_SPI_Receive(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c:313:13: warning: unused variable 'z' [-Wunused-variable]
+  313 |         int z = ((data[5]<<8)|data[4]);
+      |             ^
+../Core/Src/main.c:312:13: warning: unused variable 'y' [-Wunused-variable]
+  312 |         int y = ((data[3]<<8)|data[2]);
+      |             ^
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:373:37: warning: "/*" within comment [-Wcomment]
-  373 |         configASSERT(pdPASS == ret);/*
+../Core/Src/main.c:416:37: warning: "/*" within comment [-Wcomment]
+  416 |         configASSERT(pdPASS == ret);/*
       |                                      
-../Core/Src/main.c:375:9: warning: "/*" within comment [-Wcomment]
-  375 |         /*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
+../Core/Src/main.c:418:9: warning: "/*" within comment [-Wcomment]
+  418 |         /*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
       |          
-../Core/Src/main.c:363:16: warning: unused variable 'h_task2' [-Wunused-variable]
-  363 |   TaskHandle_t h_task2 = NULL;
+../Core/Src/main.c:406:16: warning: unused variable 'h_task2' [-Wunused-variable]
+  406 |   TaskHandle_t h_task2 = NULL;
       |                ^~~~~~~
-../Core/Src/main.c:362:16: warning: unused variable 'h_task1' [-Wunused-variable]
-  362 |   TaskHandle_t h_task1 = NULL;
+../Core/Src/main.c:405:16: warning: unused variable 'h_task1' [-Wunused-variable]
+  405 |   TaskHandle_t h_task1 = NULL;
       |                ^~~~~~~
-../Core/Src/main.c: In function 'vApplicationStackOverflowHook':
-../Core/Src/main.c:311:1: warning: control reaches end of non-void function [-Wreturn-type]
-  311 | }
+../Core/Src/main.c: In function 'write_read_adx':
+../Core/Src/main.c:274:1: warning: control reaches end of non-void function [-Wreturn-type]
+  274 | }
       | ^
-In file included from ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:56,
-                 from ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:56,
-                 from ../Core/Src/main.c:21:
-../Core/Src/main.c: In function 'main':
-../Core/Inc/FreeRTOSConfig.h:130:30: warning: 'ret' is used uninitialized [-Wuninitialized]
-  130 | #define configASSERT( x ) if ((x) == 0) {taskDISABLE_INTERRUPTS(); for( ;; );}
-      |                              ^
-../Core/Src/main.c:361:14: note: 'ret' was declared here
-  361 |   BaseType_t ret;
-      |              ^~~
+../Core/Src/main.c: In function 'PowerCTL':
+../Core/Src/main.c:282:1: warning: control reaches end of non-void function [-Wreturn-type]
+  282 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTLWake':
+../Core/Src/main.c:290:1: warning: control reaches end of non-void function [-Wreturn-type]
+  290 | }
+      | ^
+../Core/Src/main.c: In function 'DataFormat':
+../Core/Src/main.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+  298 | }
+      | ^
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:319:1: warning: control reaches end of non-void function [-Wreturn-type]
+  319 | }
+      | ^
+../Core/Src/main.c: In function 'vApplicationStackOverflowHook':
+../Core/Src/main.c:350:1: warning: control reaches end of non-void function [-Wreturn-type]
+  350 | }
+      | ^
 arm-none-eabi-gcc -o "Tp_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m7 -T"/users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Tp_FREERTOS.elf
  
 arm-none-eabi-size  Tp_FREERTOS.elf 
 arm-none-eabi-objdump -h -S Tp_FREERTOS.elf  > "Tp_FREERTOS.list"
    text	   data	    bss	    dec	    hex	filename
-  38948	    136	  19472	  58556	   e4bc	Tp_FREERTOS.elf
+  44520	    136	  19472	  64128	   fa80	Tp_FREERTOS.elf
 Finished building: default.size.stdout
  
 Finished building: Tp_FREERTOS.list
  
-17:27:13 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+10:34:27 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
 make -j16 all 
 arm-none-eabi-size  Tp_FREERTOS.elf 
    text	   data	    bss	    dec	    hex	filename
-  38948	    136	  19472	  58556	   e4bc	Tp_FREERTOS.elf
+  44520	    136	  19472	  64128	   fa80	Tp_FREERTOS.elf
 Finished building: default.size.stdout
+ 
+10:38:10 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_take':
+../Core/Src/main.c:184:20: warning: variable 'ret_q' set but not used [-Wunused-but-set-variable]
+  184 |         BaseType_t ret_q;
+      |                    ^~~~~
+../Core/Src/main.c: In function 'getRunTimeCounterValue':
+../Core/Src/main.c:244:23: warning: unused variable 'time' [-Wunused-variable]
+  244 |         unsigned long time = __HAL_TIM_GET_COUNTER(&htim1);
+      |                       ^~~~
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:308:33: warning: passing argument 2 of 'HAL_SPI_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+  308 |         HAL_SPI_Receive(&hspi2, &data, 6, HAL_MAX_DELAY);
+      |                                 ^~~~~
+      |                                 |
+      |                                 uint8_t (*)[6] {aka unsigned char (*)[6]}
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:407,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h:793:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
+  793 | HAL_StatusTypeDef HAL_SPI_Receive(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:421:37: warning: "/*" within comment [-Wcomment]
+  421 |         configASSERT(pdPASS == ret);/*
+      |                                      
+../Core/Src/main.c:423:9: warning: "/*" within comment [-Wcomment]
+  423 |         /*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
+      |          
+../Core/Src/main.c:411:16: warning: unused variable 'h_task2' [-Wunused-variable]
+  411 |   TaskHandle_t h_task2 = NULL;
+      |                ^~~~~~~
+../Core/Src/main.c:410:16: warning: unused variable 'h_task1' [-Wunused-variable]
+  410 |   TaskHandle_t h_task1 = NULL;
+      |                ^~~~~~~
+../Core/Src/main.c: In function 'write_read_adx':
+../Core/Src/main.c:274:1: warning: control reaches end of non-void function [-Wreturn-type]
+  274 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTL':
+../Core/Src/main.c:282:1: warning: control reaches end of non-void function [-Wreturn-type]
+  282 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTLWake':
+../Core/Src/main.c:290:1: warning: control reaches end of non-void function [-Wreturn-type]
+  290 | }
+      | ^
+../Core/Src/main.c: In function 'DataFormat':
+../Core/Src/main.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+  298 | }
+      | ^
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+  324 | }
+      | ^
+../Core/Src/main.c: In function 'vApplicationStackOverflowHook':
+../Core/Src/main.c:355:1: warning: control reaches end of non-void function [-Wreturn-type]
+  355 | }
+      | ^
+arm-none-eabi-gcc -o "Tp_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m7 -T"/users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tp_FREERTOS.elf
+ 
+arm-none-eabi-size  Tp_FREERTOS.elf 
+arm-none-eabi-objdump -h -S Tp_FREERTOS.elf  > "Tp_FREERTOS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44600	    136	  19472	  64208	   fad0	Tp_FREERTOS.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tp_FREERTOS.list
+ 
+10:40:21 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_take':
+../Core/Src/main.c:184:20: warning: variable 'ret_q' set but not used [-Wunused-but-set-variable]
+  184 |         BaseType_t ret_q;
+      |                    ^~~~~
+../Core/Src/main.c: In function 'getRunTimeCounterValue':
+../Core/Src/main.c:244:23: warning: unused variable 'time' [-Wunused-variable]
+  244 |         unsigned long time = __HAL_TIM_GET_COUNTER(&htim1);
+      |                       ^~~~
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:308:33: warning: passing argument 2 of 'HAL_SPI_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+  308 |         HAL_SPI_Receive(&hspi2, &data, 6, HAL_MAX_DELAY);
+      |                                 ^~~~~
+      |                                 |
+      |                                 uint8_t (*)[6] {aka unsigned char (*)[6]}
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:407,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h:793:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
+  793 | HAL_StatusTypeDef HAL_SPI_Receive(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:421:37: warning: "/*" within comment [-Wcomment]
+  421 |         configASSERT(pdPASS == ret);/*
+      |                                      
+../Core/Src/main.c:423:9: warning: "/*" within comment [-Wcomment]
+  423 |         /*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
+      |          
+../Core/Src/main.c:411:16: warning: unused variable 'h_task2' [-Wunused-variable]
+  411 |   TaskHandle_t h_task2 = NULL;
+      |                ^~~~~~~
+../Core/Src/main.c:410:16: warning: unused variable 'h_task1' [-Wunused-variable]
+  410 |   TaskHandle_t h_task1 = NULL;
+      |                ^~~~~~~
+../Core/Src/main.c: In function 'write_read_adx':
+../Core/Src/main.c:274:1: warning: control reaches end of non-void function [-Wreturn-type]
+  274 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTL':
+../Core/Src/main.c:282:1: warning: control reaches end of non-void function [-Wreturn-type]
+  282 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTLWake':
+../Core/Src/main.c:290:1: warning: control reaches end of non-void function [-Wreturn-type]
+  290 | }
+      | ^
+../Core/Src/main.c: In function 'DataFormat':
+../Core/Src/main.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+  298 | }
+      | ^
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+  324 | }
+      | ^
+../Core/Src/main.c: In function 'vApplicationStackOverflowHook':
+../Core/Src/main.c:355:1: warning: control reaches end of non-void function [-Wreturn-type]
+  355 | }
+      | ^
+arm-none-eabi-gcc -o "Tp_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m7 -T"/users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tp_FREERTOS.elf
+ 
+arm-none-eabi-size  Tp_FREERTOS.elf 
+arm-none-eabi-objdump -h -S Tp_FREERTOS.elf  > "Tp_FREERTOS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44632	    136	  19472	  64240	   faf0	Tp_FREERTOS.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tp_FREERTOS.list
+ 
+10:40:57 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_take':
+../Core/Src/main.c:184:20: warning: variable 'ret_q' set but not used [-Wunused-but-set-variable]
+  184 |         BaseType_t ret_q;
+      |                    ^~~~~
+../Core/Src/main.c: In function 'getRunTimeCounterValue':
+../Core/Src/main.c:244:23: warning: unused variable 'time' [-Wunused-variable]
+  244 |         unsigned long time = __HAL_TIM_GET_COUNTER(&htim1);
+      |                       ^~~~
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:308:33: warning: passing argument 2 of 'HAL_SPI_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+  308 |         HAL_SPI_Receive(&hspi2, &data, 6, HAL_MAX_DELAY);
+      |                                 ^~~~~
+      |                                 |
+      |                                 uint8_t (*)[6] {aka unsigned char (*)[6]}
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:407,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h:793:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
+  793 | HAL_StatusTypeDef HAL_SPI_Receive(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:421:37: warning: "/*" within comment [-Wcomment]
+  421 |         configASSERT(pdPASS == ret);/*
+      |                                      
+../Core/Src/main.c:423:9: warning: "/*" within comment [-Wcomment]
+  423 |         /*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
+      |          
+../Core/Src/main.c:411:16: warning: unused variable 'h_task2' [-Wunused-variable]
+  411 |   TaskHandle_t h_task2 = NULL;
+      |                ^~~~~~~
+../Core/Src/main.c:410:16: warning: unused variable 'h_task1' [-Wunused-variable]
+  410 |   TaskHandle_t h_task1 = NULL;
+      |                ^~~~~~~
+../Core/Src/main.c: In function 'write_read_adx':
+../Core/Src/main.c:274:1: warning: control reaches end of non-void function [-Wreturn-type]
+  274 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTL':
+../Core/Src/main.c:282:1: warning: control reaches end of non-void function [-Wreturn-type]
+  282 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTLWake':
+../Core/Src/main.c:290:1: warning: control reaches end of non-void function [-Wreturn-type]
+  290 | }
+      | ^
+../Core/Src/main.c: In function 'DataFormat':
+../Core/Src/main.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+  298 | }
+      | ^
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+  324 | }
+      | ^
+../Core/Src/main.c: In function 'vApplicationStackOverflowHook':
+../Core/Src/main.c:355:1: warning: control reaches end of non-void function [-Wreturn-type]
+  355 | }
+      | ^
+arm-none-eabi-gcc -o "Tp_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m7 -T"/users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tp_FREERTOS.elf
+ 
+arm-none-eabi-size  Tp_FREERTOS.elf 
+arm-none-eabi-objdump -h -S Tp_FREERTOS.elf  > "Tp_FREERTOS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44632	    136	  19472	  64240	   faf0	Tp_FREERTOS.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tp_FREERTOS.list
+ 
+10:42:51 **** Incremental Build of configuration Debug for project Tp_FREERTOS ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_take':
+../Core/Src/main.c:184:20: warning: variable 'ret_q' set but not used [-Wunused-but-set-variable]
+  184 |         BaseType_t ret_q;
+      |                    ^~~~~
+../Core/Src/main.c: In function 'getRunTimeCounterValue':
+../Core/Src/main.c:244:23: warning: unused variable 'time' [-Wunused-variable]
+  244 |         unsigned long time = __HAL_TIM_GET_COUNTER(&htim1);
+      |                       ^~~~
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:308:33: warning: passing argument 2 of 'HAL_SPI_Receive' from incompatible pointer type [-Wincompatible-pointer-types]
+  308 |         HAL_SPI_Receive(&hspi2, &data, 6, HAL_MAX_DELAY);
+      |                                 ^~~~~
+      |                                 |
+      |                                 uint8_t (*)[6] {aka unsigned char (*)[6]}
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:407,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h:793:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
+  793 | HAL_StatusTypeDef HAL_SPI_Receive(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                            ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:421:37: warning: "/*" within comment [-Wcomment]
+  421 |         configASSERT(pdPASS == ret);/*
+      |                                      
+../Core/Src/main.c:423:9: warning: "/*" within comment [-Wcomment]
+  423 |         /*ret = xTaskCreate(task_give,"Give",256,NULL,6,&handle_givetask);
+      |          
+../Core/Src/main.c:411:16: warning: unused variable 'h_task2' [-Wunused-variable]
+  411 |   TaskHandle_t h_task2 = NULL;
+      |                ^~~~~~~
+../Core/Src/main.c:410:16: warning: unused variable 'h_task1' [-Wunused-variable]
+  410 |   TaskHandle_t h_task1 = NULL;
+      |                ^~~~~~~
+../Core/Src/main.c: In function 'write_read_adx':
+../Core/Src/main.c:274:1: warning: control reaches end of non-void function [-Wreturn-type]
+  274 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTL':
+../Core/Src/main.c:282:1: warning: control reaches end of non-void function [-Wreturn-type]
+  282 | }
+      | ^
+../Core/Src/main.c: In function 'PowerCTLWake':
+../Core/Src/main.c:290:1: warning: control reaches end of non-void function [-Wreturn-type]
+  290 | }
+      | ^
+../Core/Src/main.c: In function 'DataFormat':
+../Core/Src/main.c:298:1: warning: control reaches end of non-void function [-Wreturn-type]
+  298 | }
+      | ^
+../Core/Src/main.c: In function 'Read4Data':
+../Core/Src/main.c:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+  324 | }
+      | ^
+../Core/Src/main.c: In function 'vApplicationStackOverflowHook':
+../Core/Src/main.c:355:1: warning: control reaches end of non-void function [-Wreturn-type]
+  355 | }
+      | ^
+arm-none-eabi-gcc -o "Tp_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m7 -T"/users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS/STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tp_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tp_FREERTOS.elf
+ 
+arm-none-eabi-size  Tp_FREERTOS.elf 
+arm-none-eabi-objdump -h -S Tp_FREERTOS.elf  > "Tp_FREERTOS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44648	    136	  19472	  64256	   fb00	Tp_FREERTOS.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tp_FREERTOS.list
  

@@ -2860,3 +2860,88 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 !MESSAGE OK
 !SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-25 15:42:45.686
 !MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+!SESSION 2024-04-26 08:08:54.876 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-26 08:09:05.137
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-26 08:09:05.138
+!MESSAGE Log4j2 initialized with config file /users/tenzthup91/STM32CubeIDE/TP_noyau/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-26 08:09:11.446
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 08:18:00.465
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 08:18:00.465
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 08:18:00.465
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 08:23:00.154
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 08:23:00.154
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 08:23:00.154
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 08:25:40.676
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 08:25:40.677
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 08:25:40.677
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 09:16:22.438
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 09:16:22.438
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 09:16:22.438
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 09:17:06.416
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 09:17:06.416
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 09:17:06.416
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 09:17:46.932
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 09:17:46.932
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 09:17:46.932
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 09:18:20.353
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 09:18:20.353
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 09:18:20.353
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 09:20:10.692
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 09:20:10.692
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 09:20:10.692
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 09:20:48.694
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 09:20:48.694
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 09:20:48.694
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'
+
+!ENTRY org.eclipse.core.resources 4 77 2024-04-26 09:35:08.301
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-04-26 09:35:08.301
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-04-26 09:35:08.301
+!MESSAGE /users/tenzthup91/STM32CubeIDE/TP_noyau/Tp_FREERTOS overlaps the location of another project: 'Tp_FREERTOS'

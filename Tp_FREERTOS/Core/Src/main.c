@@ -260,24 +260,68 @@ int show_task_list(int argc, char **argv) {
     return 0;
 }
 
+
 int write_read_adx(int argc, char ** argv)
 {
-	unsigned char write, read = (1<<7) + 0 + 0;
+	uint8_t command[2] = {0x80, 0};
+	uint8_t data[2] = {0, 0};
 
-	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_3,GPIO_PIN_RESET);
-	HAL_SPI_Transmit(&hspi2,&write,1,HAL_MAX_DELAY);
-	HAL_SPI_Receive(&hspi2,&read,1,HAL_MAX_DELAY);
-	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_3,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(NSS_GPIO_Port,NSS_Pin,GPIO_PIN_RESET);
+	HAL_SPI_TransmitReceive(&hspi2, command, data, 2, 100);
+	HAL_GPIO_WritePin(NSS_GPIO_Port,NSS_Pin,GPIO_PIN_SET);
 
-	if (read == 0xE5)
-		printf("C'est connecté\r\n");
-
-	else
-		printf("Erreur\r\n");
-
-	return 0;
+	printf("Données reçues: 0x%x\r\n",data[1]);
 }
 
+int PowerCTL(int argc, char ** argv)
+{
+	uint8_t command[2] = {0x2D, 0x00};
+	HAL_GPIO_WritePin(NSS_GPIO_Port,NSS_Pin,GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi2, command, 2, 100);
+	HAL_GPIO_WritePin(NSS_GPIO_Port,NSS_Pin,GPIO_PIN_SET);
+}
+
+int PowerCTLWake(int argc, char ** argv)
+{
+	uint8_t command[2] = {0x2D, 0x08};
+	HAL_GPIO_WritePin(NSS_GPIO_Port,NSS_Pin,GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi2, command, 2, 100);
+	HAL_GPIO_WritePin(NSS_GPIO_Port,NSS_Pin,GPIO_PIN_SET);
+}
+
+int DataFormat(int argc, char ** argv)
+{
+	uint8_t command[2] = {0x31, 0x01};
+	HAL_GPIO_WritePin(NSS_GPIO_Port,NSS_Pin,GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi2, command, 2, 100);
+	HAL_GPIO_WritePin(NSS_GPIO_Port,NSS_Pin,GPIO_PIN_SET);
+}
+
+int Read4Data(int argc, char ** argv)
+{
+
+	uint8_t command = 0x32 | 0x80;
+	uint8_t data[6];
+
+	HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi2, &command, 1, HAL_MAX_DELAY);
+	HAL_SPI_Receive(&hspi2, &data, 6, HAL_MAX_DELAY);
+	HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, GPIO_PIN_SET);
+
+	int16_t x = (int16_t)((data[1] << 8) | data[0]);
+	int16_t y = (int16_t)((data[3] << 8) | data[2]);
+	int16_t z = (int16_t)((data[5] << 8) | data[4]);
+
+	int xg = x * 0.0078;
+	int yg = y * 0.0078;
+	int zg = z * 0.0078;
+
+
+	printf("x: %d\r\n",xg);
+	printf("y: %d\r\n",yg);
+	printf("z: %d\r\n",zg);
+
+}
 
 int addition (int argc, char ** argv)
 {
@@ -319,7 +363,11 @@ void shell(void * unused)
 	//shell_add('t',getRunTimeCounterValue,"time");
 	//shell_add('r',show_runtime_stats,"runtime");
 	//shell_add('T',show_task_list,"task");
-	//shell_add('w', write_read_adx, "write read adx");
+	shell_add('w', write_read_adx, "write read adx");
+	shell_add('x', PowerCTL, "Power");
+	shell_add('c', PowerCTLWake, "Wake Power");
+	shell_add('v', DataFormat, "Data Format");
+	shell_add('b', Read4Data, "Read");
 	shell_run();
 }
 
@@ -376,16 +424,16 @@ int main(void)
 	configASSERT(pdPASS == ret);
 
 	ret = xTaskCreate(task_take,"Take",256,NULL,7,&handle_taketask);
-	configASSERT(pdPASS == ret);*/
+	configASSERT(pdPASS == ret);
 
-	//ret = xTaskCreate(task_blink_led,"Blink",256,NULL,5,&handle_blink_led);
+	ret = xTaskCreate(task_blink_led,"Blink",256,NULL,5,&handle_blink_led);
 	configASSERT(pdPASS == ret);
 
 	if(ret != pdPASS)
 	{
 		printf("Error led\r\n");
 		Error_Handler();
-	}
+	}*/
 
 	/*for(int i = 0;i<50;i++){
 		if (ret == pdPASS){
