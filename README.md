@@ -50,6 +50,14 @@ Flash 3,14%
 ![image](https://github.com/Ngoduu/TP_noyau/assets/145014223/c647e1cf-4982-4b79-9bc2-90c1ebcd55ac)
 
 
+3. Quelles sont les valeurs à mettre dans les registres INT_ENABLE et POWER_CTL pour démarrer la mesure et délencher une interruption à chaque mesure ?
+4. À la suite du code précédent, dans la fonction shell, écrivez un code permet- tant de lire 4 valeurs consécutives. Utilisez du polling pour attendre que la broche INT1 passe à High.
+5. Faites la moyenne de ces quatre valeurs, mettez les accélérations en forme, et affichez-les à travers l’UART.
+
+![image](https://github.com/Ngoduu/TP_noyau/assets/145014223/becaeb06-dfbe-416c-be91-fd086efcb1ce)
+
+![image](https://github.com/Ngoduu/TP_noyau/assets/145014223/641219ae-2d10-407e-8449-afdc197f79bd)
+
 
 
 
